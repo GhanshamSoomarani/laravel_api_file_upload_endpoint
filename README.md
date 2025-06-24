@@ -152,10 +152,14 @@ Make sure to set the Content-Type to multipart/form-data in Postman.
     app/
     └── Http/
         └── Controllers/
-            └── PostController.php
+            └── FileController.php
+
+    └── Models/
+        └── File.php
 
     routes/
     └── api.php
+
 
     storage/
     └── app/
