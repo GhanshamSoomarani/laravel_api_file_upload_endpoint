@@ -79,7 +79,7 @@ Update the File model app/Models/File.php:
 
 ## ✅ Step 4: Make Controller
 
-     php artisan make:controller PostController
+     php artisan make:controller FileController
 
 and make the function  
 
@@ -91,7 +91,7 @@ and make the function
             $getfilenamewitoutext = pathinfo($filename, PATHINFO_FILENAME);
             $getfileExtension = $request->file('file')->getClientOriginalExtension();
             $createnewFileName = time().'_'.str_replace(' ','_', $getfilenamewitoutext).'.'.$getfileExtension;
-            $img_path = $request->file('file')->storeAs('public/post_img', $createnewFileName);
+            $img_path = $request->file('file')->storeAs('public/post_file', $createnewFileName);
             $fileObj->file = $createnewFileName;
         }
 
@@ -123,7 +123,7 @@ Server will run at: http://localhost:8000
 
 - Method: POST
 
-- URL: http://localhost:8000/api/posts
+- URL: http://localhost:8000/api/fileupload
 
 - Body Type: form-data
 
