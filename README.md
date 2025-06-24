@@ -127,9 +127,7 @@ Server will run at: http://localhost:8000
 
 - Body Type: form-data
 
-    - title → Your Task Title
-
-    - description → Task Description
+    - Key → file
 
     - image → Upload a JPG/PNG image
 
